@@ -1,5 +1,4 @@
-INSERT INTO `departments` VALUES  //governs the whole report, INDEX 0 in array//
-
+INSERT INTO `departments` VALUES governs the whole report, INDEX 0 in array
 ('d001','Marketing'), 
 ('d002','Finance'),
 ('d003','Human Resources'),

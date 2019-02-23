@@ -32,14 +32,13 @@ for (var i = 0; i < deptDataArray.length; i++) {
     salaries.push([]);
     
 }
-// console.log(departmentId);
-// console.log(departments);
-// console.log(employeeId);
-// console.log(employeeName);
-// console.log(salaries);
+console.log(departmentId);
+console.log(departments);
+console.log(employeeId);
+console.log(employeeName);
+console.log(salaries);
     
 });
-
 
 // process "dept_emp.txt" file - keep it "my code" stupid simple
 fs.readFile('dept_emp.txt', 'utf8' , function(err, data) {
@@ -48,44 +47,43 @@ fs.readFile('dept_emp.txt', 'utf8' , function(err, data) {
     var employeeDataClean = data.replace(/INSERT INTO `dept_emp` VALUES - id, dept, 9999/g, "");
     var employeeDataArray = employeeDataClean.split('\n');
     
-    console.log(data);
-    
-//     for (var i = 0; i < employeeDataArray.length; i++) {
-//         if (employeeDataArray[i].slice(28, 34) == '9999') {
-            
-//             // console.log(employeeDataArray[i].slice(8, 12));
-//             // console.log(employeeDataArray[i].slice(1, 6));
-            
-//             employeeId[departmentId.indexOf(employeeDataArray[i].slice(8, 12)].push(employeeDataArray[i].slice(1, 6));
-//             //index of the dept [0, 1, 2, 3,]
-//         }
-        
-//     }
-    
-//     console.log(employeeId);
-    
-// });
-
-// process "employee.txt" file - keep it "my code" stupid simple
-// fs.readFile('employee.txt', 'utf8' , function(err, data) {
-//     if (err) throw err;
-    
-//     var employeeDataClean = data.replace(/INSERT INTO `employees` VALUES - id, last name, first name /g, "");
-//     var employeeNameDataArray = employeeDataClean.split('\n');
-    
-//     console.log(employeeNameDataArray);
+    console.log(employeeDataArray);
     
     
-    // for (var i = 0; i < employeeDataArray.length; i++) {
-    //     if (employeeDataArray[i].slice(28, 32) == '9999') {
+    for (var i = 0; i < employeeDataArray.length; i++) {
+        if (employeeDataArray[i].slice(28, 34) == '9999') {
             
             // console.log(employeeDataArray[i].slice(8, 12));
             // console.log(employeeDataArray[i].slice(1, 6));
             
-        //     employeeName[departmentId.indexOf(employeeDataArray[i].slice(8, 12))].push(employeeDataArray[i].slice(1, 6));
-        //     //index of the dept [0, 1, 2, 3,]
-        // }
+    //         employeeId[departmentId.indexOf(employeeDataArray[i].slice(8, 12)].push(employeeDataArray[i].slice(1, 6));
+    //         //index of the dept [0, 1, 2, 3,]
+    //     }
         
     // }
     
     // console.log(employeeId);
+    
+// });
+
+// process "employee.txt" file - keep it "my code" stupid simple
+fs.readFile('employee.txt', 'utf8' , function(err, data) {
+    if (err) throw err;
+    
+    var employeeDataClean = data.replace(/INSERT INTO `employees` VALUES - id, last name, first name /g, "");
+    var employeeNameDataArray = employeeDataClean.split('\n');
+    
+    console.log(employeeNameDataArray);
+    
+    
+    for (var i = 0; i < employeeDataArray.length; i++) {
+        if (employeeDataArray[i].slice(28, 32) == '9999') {
+            
+            console.log(employeeDataArray[i].slice(8, 12));
+            console.log(employeeDataArray[i].slice(1, 6));
+            
+            employeeName[departmentId.indexOf(employeeDataArray[i].slice(8, 12))].push(employeeDataArray[i].slice(1, 6));
+            //index of the dept [0, 1, 2, 3,]
+        }
+        
+    };

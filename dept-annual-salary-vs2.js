@@ -92,4 +92,6 @@ fs.readFile('salaries1.txt', 'utf8', function(err, data) {
         });
 
 
-                    
+                 
+                //  Master the data, first - details
+                // geek, hustle, people person, startups need all three
